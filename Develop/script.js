@@ -8,45 +8,58 @@
   var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+",",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", ']', '^', '_', "`", "{", "|", "}", "~"];
   
 
-  
-  var length = window.prompt("Enter password length between 8 and 128 characters:", " ");
-  var number = ParseInt(length, radix);
-  
-  if(number >= 8 && number <=128) {
+  function generatePassword () {
 
-    
-  var chartype1 = window.confirm(“Do you want to include lower case letters?”);
-  var chartype2 = window.confirm(“Do you want to include upper case letters?”);
-  var chartype3 = window.confirm(“Do you want to include numbers?”);
-  var chartype4 = window.confirm(“Do you want to include symbols”?);
+  var choices = []
+
+  var length = window.prompt('Enter password length between 8 and 128 characters:', '');
+  var number = parseInt (length);
   
-  Else (
+  if (number >= 8 && number <=128) {
+
+  var chartype1 = window.confirm('Do you want to include lower case letters?'); 
+  var chartype2 = window.confirm('Do you want to include upper case letters?'); 
+  var chartype3 = window.confirm('Do you want to include numbers?'); 
+  var chartype4 = window.confirm('Do you want to include symbols?');
+  
+  } else {
  
-  window.alert(“Password must be between 8 and 128 characters");
-   
+  window.alert('Password must be between 8 and 128 characters'); 
+
+}
   
- 
-    
-if( chartype1 === true &&|| chartype2 === true &&|| chartype3 === true  &&|| chartype-4 === true); 
+
+if  (chartype1 === false && chartype2 === false && chartype3 === false  && chartype4 === false) {
   
-  
+  window.alert('Must click on OK to choose at least one character type'); 
+}
+if (chartype1 === true){           
+  choices =choices.concat (lowerCaseLetters);
+}
+ if (chartype2 === true){
+  choices = choices.concat (upperCaseLetters);
+}
+if (chartype3 === true){
+  choices = choices.concat (numbers);
+ }
+ if (chartype4 === true){
+  choices = choices.concat (symbols);
+ }
+
+console.log(choices);
 
 
 // Creating random password
 
-function generatePassword () {
-  prompt("Please enter a length for your password between 8 and 128");
-  prompt("Please indicate if you the charcter types to include")
-  alert("Length ")
-  prompt("Do I want to use " + lowercaseLetters + upperCaseLetter)
+
   var password = "";
-  for (let i = 0; i < password.length; i++) {
- 
-  var index= Math.floor(Math.random() * characters.length);
-  result.innerText = chosen.join;
-  return password.join ('');
+  for (let i = 0; i < number; i++) {
+   var index = Math.floor(Math.random() * choices.length);
+    password += choices[index];
+
   }
-  
+  return password;
+  console.log(password);
  
   }
 
@@ -64,6 +77,6 @@ function writePassword() {
   passwordText.value = password;
 
   // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
 
 }
+generateBtn.addEventListener("click", writePassword);
