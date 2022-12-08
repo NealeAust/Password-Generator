@@ -14,12 +14,12 @@ function generatePassword() {
 
   //Prompt user to enter criteria for password and
   //Display error message if selection criteria not met
-  var length = window.prompt('Enter password length between 8 and 128 characters!\n          **Increase to strengthen password**');
+  var length = window.prompt('Enter password length between 8 and 128 characters!\n - Greater length to strengthen password.');
   var number = parseInt(length);
 
   if (number >= 8 && number <= 128) {
 
-    var chartype1 = window.confirm('To include lower case letters select OK.\n **Select multiple options to strengthen password**');
+    var chartype1 = window.confirm('To include lower case letters select OK.\n - Select multiple options to strengthen password.');
     var chartype2 = window.confirm('To include upper case letters select OK.');
     var chartype3 = window.confirm('To include numbers select OK.');
     var chartype4 = window.confirm('To include symbols select OK.');
