@@ -2,14 +2,14 @@
 
 // Declare variables
 
-<<<<<<< HEAD
+
 var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var symbols = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "\\", ']', '^', '_', "`", "{", "|", "}", "~"];
 
-//'Refresh' page will clear screen if generating another password
-//Commence the generate random password process
+// 'Refresh' page will clear screen if generating another password
+// Commence the generate random password process
 function generatePassword() {
 
   var choices = []
@@ -55,8 +55,6 @@ function generatePassword() {
 
     console.log(choices);
   }
-
-
   
   // Selects required number of characters from selection list created above
   // Formulates and returns a password based on criteria provided by user
@@ -73,7 +71,7 @@ var password = "";
 }
 
 // Display password on screen
-=======
+
   var lowerCaseLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -138,7 +136,7 @@ console.log(choices);
 
 //Generate show password on screen
 
->>>>>>> 4a40f2732a3d4669df537a15e68cb4adc5ec7d7e
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
@@ -153,7 +151,9 @@ function writePassword() {
 
 }
 generateBtn.addEventListener("click", writePassword);
-<<<<<<< HEAD
 
-=======
->>>>>>> 4a40f2732a3d4669df537a15e68cb4adc5ec7d7e
+
+
+
+
+
